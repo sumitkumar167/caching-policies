@@ -1,0 +1,1 @@
+hm_1_short.csv LRU CacheSize 1 calls 57619 hits 1 hitRatio 1.73554e-05 readHits 0 readHitRatio 0 writeHits 1 writeHitRatio 1.73554e-05 evictedDirtyPage 13205
