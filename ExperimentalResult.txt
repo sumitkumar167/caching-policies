@@ -1,1 +1,75 @@
 hm_1_short.csv LRU CacheSize 1 calls 57619 hits 1 hitRatio 1.73554e-05 readHits 0 readHitRatio 0 writeHits 1 writeHitRatio 1.73554e-05 evictedDirtyPage 13205
+hm_1_short.csv LRU CacheSize 1 calls 57619 hits 1 hitRatio 1.73554e-05 readHits 0 readHitRatio 0 writeHits 1 writeHitRatio 1.73554e-05 evictedDirtyPage 13205
+hm_1_short.csv hm_1_short.csv hm_1_short.csv hm_1_short.csv LFU Algorithm
+Cache Size: 1
+Total Calls: 57619
+Total Hits: 1
+Hit Rate: 0.00173554%
+Read Hits: 0
+Write Hits: 1
+Evicted Dirty Pages: 13205
+----------------------------------------
+hm_1_short.csv LFU Algorithm
+Cache Size: 1
+Total Calls: 57619
+Total Hits: 1
+Hit Rate: 0.00173554%
+Read Hits: 0
+Write Hits: 1
+Evicted Dirty Pages: 13205
+----------------------------------------
+hm_1_short.csv LFU Algorithm
+Cache Size: 1
+Total Calls: 57619
+Total Hits: 1
+Hit Rate: 0.00173554%
+Read Hits: 0
+Write Hits: 1
+Evicted Dirty Pages: 13205
+----------------------------------------
+hm_1_short.csv LFU Algorithm
+Cache Size: 20
+Total Calls: 57619
+Total Hits: 320
+Hit Rate: 0.555372%
+Read Hits: 242
+Write Hits: 78
+Evicted Dirty Pages: 13175
+----------------------------------------
+hm_1_short.csv LFU Algorithm
+Cache Size: 100
+Total Calls: 57619
+Total Hits: 3022
+Hit Rate: 5.2448%
+Read Hits: 2650
+Write Hits: 372
+Evicted Dirty Pages: 13020
+----------------------------------------
+hm_1_short.csv LFU Algorithm
+Cache Size: 1000
+Total Calls: 57619
+Total Hits: 20620
+Hit Rate: 35.7868%
+Read Hits: 18488
+Write Hits: 2132
+Evicted Dirty Pages: 11480
+----------------------------------------
+hm_1_short.csv LFU Algorithm
+Cache Size: 1000
+Total Calls: 57619
+Total Hits: 20620
+Hit Rate: 35.7868%
+Read Hits: 18488
+Write Hits: 2132
+Evicted Dirty Pages: 11480
+----------------------------------------
+hm_1_short.csv hm_1_short.csv hm_1_short.csv hm_1_short.csv hm_1_short.csv LFU Algorithm
+Cache Size: 1000
+Total Calls: 57619
+Total Hits: 20620
+Hit Rate: 35.7868%
+Read Hits: 18488
+Write Hits: 2132
+Evicted Dirty Pages: 11480
+----------------------------------------
+hm_1_short.csv hm_1_short.csv hm_1_short.csv 

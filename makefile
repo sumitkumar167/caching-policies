@@ -4,7 +4,7 @@ TARGET = cache
 #CPP_FILES = $(shell ls *.cpp)
 #BASE = $(basename$(CPP_FILES))
 #OBJS = $(addsuffix .o, $(BASE))
-OBJS = main.o lru.o #mru.o lfu.o arc.o mq.o lecar.o harc.o exp.o
+OBJS = main.o lru.o lfu.o #mru.o lfu.o arc.o mq.o lecar.o harc.o exp.o
 
 $(TARGET):$(OBJS)
 	rm -f $@

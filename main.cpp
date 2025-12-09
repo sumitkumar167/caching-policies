@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "lru.h"
-//#include "lfu.h"
+#include "lfu.h"
 //#include "arc.h"
 //#include "mq.h"
 //#include "mru.h"
@@ -202,11 +202,11 @@ int main(int argc, char* argv[])
 					    
 					}
 			       
-			    	}else{    // for TPC-H traces
-					while (myfile >> timestamp2 >> key >> AccessPattern) {
-					    ca.refer(key, rwtype);
-				}
-			    }
+					else{    // for TPC-H traces
+						while (myfile >> timestamp2 >> key >> AccessPattern) {
+							ca.refer(key, rwtype);
+						}
+					}
 
 			}
 		}else{
@@ -220,6 +220,57 @@ int main(int argc, char* argv[])
 		ca.cachehits();
 		std::cout << std::endl;
 		// close the input file 
+		myfile.close();
+	}
+	else if (LFU) {
+		//std::ifstream myfile(filename);
+		LFUCache lfu_cache(csize);
+
+		if (myfile.is_open()) {
+			while (!myfile.eof()) {
+				if (trace_type == 2) {  // for MSR traces
+					getline(myfile, temp1, ','); //timestamp
+					getline(myfile, temp2, ','); //device
+					getline(myfile, temp3, ','); //disk
+					getline(myfile, temp4, ','); //read or write
+					getline(myfile, temp5, ','); //offset
+					getline(myfile, temp6, ','); //request size
+					getline(myfile, temp7); //temp
+					if (!temp1.empty()) {
+						timestamp = std::stoll(temp1);
+						device = temp2;
+						disk = std::stoi(temp3);
+						rwtype = temp4;
+						offset = std::stoll(temp5);
+						size = std::stoi(temp6);
+						//temp7 = std::stoi(temp7);
+
+						//request unit: 0.5KB
+						for (int i = 0; i < (int)ceil(size / (4.0 * 1024)); i++) {
+							lfu_cache.refer(offset + i * 1024 * 4, rwtype);
+						}
+						count = count + 1;
+					}
+				}
+				else {    // for TPC-H traces
+					while (myfile >> timestamp2 >> key >> AccessPattern) {
+						// set rwtype based on AccessPattern
+						// if (AccessPattern == 'R' || AccessPattern == 'r') rwtype = "Read";
+						// else rwtype = "Write";
+						lfu_cache.refer(key, rwtype);
+					}
+				}
+			}
+		}
+		else {
+			std::cerr << "error: unable to open input file" << std::endl;
+			return -1;
+		}
+
+		// print cache hit
+		lfu_cache.cacheHits();
+		std::cout << std::endl;
+		// close the input file
 		myfile.close();
 	}
 	else{
