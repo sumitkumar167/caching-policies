@@ -8,6 +8,7 @@
 #include <string.h>
 #include "lru.h"
 #include "lfu.h"
+#include "cacheus.h"
 //#include "arc.h"
 //#include "mq.h"
 //#include "mru.h"
@@ -73,6 +74,7 @@ int main(int argc, char* argv[])
 	bool LeCaR = false; 
 	bool HARC = false;
 	bool Exp = false;
+	bool CACHEUS = false;
 
 
 	string temp1;
@@ -106,6 +108,7 @@ int main(int argc, char* argv[])
 		    else if(cache_policy == "LeCaR") LeCaR = true;//LeCaRCache ca(CACHESIZE*1024*1024*2);
 		    else if(cache_policy == "HARC") HARC = true;//LeCaRCache ca(CACHESIZE*1024*1024*2);
 		    else if(cache_policy == "Exp") Exp = true;//ExpCache ca(CACHESIZE*1024*1024*2);
+			else if(cache_policy == "CACHEUS") CACHEUS = true;//ExpCache ca(CACHESIZE*1024*1024*2);
 		    else{
 			fprintf(stderr, "Wrong cache type\n");
 			usage();
@@ -207,7 +210,7 @@ int main(int argc, char* argv[])
 							ca.refer(key, rwtype);
 						}
 					}
-
+				}
 			}
 		}else{
 		std::cerr << "error: unable to open input file" << std::endl;
@@ -273,11 +276,61 @@ int main(int argc, char* argv[])
 		// close the input file
 		myfile.close();
 	}
-	else{
+	else if (CACHEUS) {
+		std::cout << "... Starting CACHEUS..." << std::endl;
+		CACHEUSCache ca(csize);
+		if (myfile.is_open()) {
+			while (!myfile.eof()) {
+				if (trace_type == 2) {  // for MSR traces
+					std::cout << "MSR trace" << std::endl;
+					getline(myfile, temp1, ','); //timestamp
+					getline(myfile, temp2, ','); //device
+					getline(myfile, temp3, ','); //disk
+					getline(myfile, temp4, ','); //read or write
+					getline(myfile, temp5, ','); //offset
+					getline(myfile, temp6, ','); //request size
+					getline(myfile, temp7); //temp
+					if (!temp1.empty()) {
+						timestamp = std::stoll(temp1);
+						device = temp2;
+						disk = std::stoi(temp3);
+						rwtype = temp4;
+						offset = std::stoll(temp5);
+						size = std::stoi(temp6);
+						//temp7 = std::stoi(temp7);
 
+						//request unit: 0.5KB
+						int i;
+						for (i = 0; i < (int)ceil(size / (4.0 * 1024)); i++) {
+							ca.refer(offset + i * 1024 * 4, rwtype);
+						}
+						count = count + 1;
+					}
+				}
+				else {    // for TPC-H traces
+					std::cout << "TPC-H trace" << std::endl;
+					while (myfile >> timestamp2 >> key >> AccessPattern) {
+						ca.refer(key, rwtype);
+					}
+				}
+			}
+		}
+		else {
+			std::cerr << "error: unable to open input file" << std::endl;
+			return -1;
+		}
+		// print cache hit
+		ca.cacheHits();
+		std::cout << std::endl;
+		// close the input file
+		myfile.close();
+	}
+	else{
+		std::cout << "No cache policy selected" << std::endl;
 		std::cerr << "cannot find a proper cache policy" << std::endl;
 	}
 
 
 	return 0;
 }
+// }
