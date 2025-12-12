@@ -108,7 +108,7 @@ int main(int argc, char* argv[])
 		    else if(cache_policy == "LeCaR") LeCaR = true;//LeCaRCache ca(CACHESIZE*1024*1024*2);
 		    else if(cache_policy == "HARC") HARC = true;//LeCaRCache ca(CACHESIZE*1024*1024*2);
 		    else if(cache_policy == "Exp") Exp = true;//ExpCache ca(CACHESIZE*1024*1024*2);
-			else if(cache_policy == "CACHEUS") CACHEUS = true;//ExpCache ca(CACHESIZE*1024*1024*2);
+		    else if(cache_policy == "CACHEUS") CACHEUS = true;//ExpCache ca(CACHESIZE*1024*1024*2);
 		    else{
 			fprintf(stderr, "Wrong cache type\n");
 			usage();
@@ -205,12 +205,11 @@ int main(int argc, char* argv[])
 					    
 					}
 			       
-					else{    // for TPC-H traces
+				}else{    // for TPC-H traces
 						while (myfile >> timestamp2 >> key >> AccessPattern) {
 							ca.refer(key, rwtype);
 						}
 					}
-				}
 			}
 		}else{
 		std::cerr << "error: unable to open input file" << std::endl;

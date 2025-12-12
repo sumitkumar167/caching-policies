@@ -126,4 +126,31 @@ Read Hits: 3752
 Write Hits: 444
 Evicted Dirty Pages: 12874
 ----------------------------------------
-hm_1_short.csv 
+hm_1_short.csv hm_1_short.csv hm_1_short.csv hm_1_short.csv hm_1_short.csv LFU Algorithm
+Cache Size: 100
+Total Calls: 57619
+Total Hits: 3215
+Hit Rate: 5.57976%
+Read Hits: 2902
+Write Hits: 313
+Evicted Dirty Pages: 12882
+----------------------------------------
+hm_1_short.csv LRU CacheSize 100 calls 57619 hits 3006 hitRatio 0.0521703 readHits 2624 readHitRatio 0.0455405 writeHits 382 writeHitRatio 0.00662976 evictedDirtyPage 12996
+hm_1_short.csv CACHEUS Algorithm
+Cache Size: 100
+Total Calls: 57619
+Total Hits: 4196
+Hit Rate: 7.28232%
+Read Hits: 3752
+Write Hits: 444
+Evicted Dirty Pages: 12874
+----------------------------------------
+hm_1_short.csv LFU Algorithm
+Cache Size: 100
+Total Calls: 57619
+Total Hits: 3215
+Hit Rate: 5.57976%
+Read Hits: 2902
+Write Hits: 313
+Evicted Dirty Pages: 12882
+----------------------------------------
