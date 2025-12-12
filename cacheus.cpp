@@ -258,7 +258,6 @@ void CACHEUSCache::evictAndInsert(long long addr, const string &rwtype) {
   @param: rwtype: read/write type of page
 */
 void CACHEUSCache::refer(long long int addr, string rwtype) {
-    std::cout << "Referencing page for CACHEUS " << std::endl;
     calls++;
     auto it = table.find(addr);
     if (it != table.end()) {

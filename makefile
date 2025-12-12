@@ -4,10 +4,10 @@ TARGET = cache
 #CPP_FILES = $(shell ls *.cpp)
 #BASE = $(basename$(CPP_FILES))
 #OBJS = $(addsuffix .o, $(BASE))
-OBJS = main.o lru.o lfu.o cacheus.o #mru.o lfu.o arc.o mq.o lecar.o harc.o exp.o
+OBJS = main.o lru.o lfu.o cacheus.o lirs.o arc.o #mru.o lfu.o arc.o mq.o lecar.o harc.o exp.o
 
 $(TARGET):$(OBJS)
-	rm -f $@
+	rm -rf $@
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
 
 %.o:%.cpp

@@ -154,3 +154,108 @@ Read Hits: 2902
 Write Hits: 313
 Evicted Dirty Pages: 12882
 ----------------------------------------
+hm_1_short.csv LIRS CacheSize 1 calls 57619 hits 0 hitRatio 0 readHits 44412 readHitRatio 0.770787 writeHits 13207 writeHitRatio 0.229213 evictedDirtyPage 29077
+hm_1_short.csv LIRS CacheSize 100 calls 57619 hits 0 hitRatio 0 readHits 44412 readHitRatio 0.770787 writeHits 13207 writeHitRatio 0.229213 evictedDirtyPage 29077
+hm_1_short.csv LIRS CacheSize 100 calls 57619 hits 1 hitRatio 1.73554e-05 readHits 44412 readHitRatio 0.770787 writeHits 13207 writeHitRatio 0.229213 evictedDirtyPage 29077
+hm_1_short.csv LIRS CacheSize 100 calls 57619 hits 4574 hitRatio 0.0793835 readHits 4057 readHitRatio 0.0704108 writeHits 517 writeHitRatio 0.00897273 evictedDirtyPage 12888
+hm_1_short.csv LIRS CacheSize 100 calls 57619 hits 4574 hitRatio 0.0793835 readHits 4057 readHitRatio 0.0704108 writeHits 517 writeHitRatio 0.00897273 evictedDirtyPage 12888
+hm_1_short.csv LIRS 
+CacheSize 100
+ calls 57619
+ hits 4574
+ hitRatio 0.0793835
+ readHits 4057
+ readHitRatio 0.0704108
+ writeHits 517
+ writeHitRatio 0.00897273
+ evictedDirtyPage 12888
+----------------------------------------
+hm_1_short.csv LIRS 
+CacheSize 1000
+ calls 57619
+ hits 24288
+ hitRatio 0.421528
+ readHits 21596
+ readHitRatio 0.374807
+ writeHits 2692
+ writeHitRatio 0.0467207
+ evictedDirtyPage 11105
+----------------------------------------
+hm_1_short.csv LIRS 
+CacheSize 10000
+ calls 57619
+ hits 40750
+ hitRatio 0.707232
+ readHits 35844
+ readHitRatio 0.622086
+ writeHits 4906
+ writeHitRatio 0.0851455
+ evictedDirtyPage 4301
+----------------------------------------
+hm_1_short.csv hm_1_short.csv ARC CacheSize 10000 calls 57619 hits 40498 hitRatio 0.702858 readHits 36406 readHitRatio 0.63184 writeHits 4092 writeHitRatio 0.0710182 evictedDirtyPage 2906
+hm_1_short.csv ARC 
+CacheSize 10000
+ calls 57619
+ hits 40498
+ hitRatio 0.702858
+ readHits 36406
+ readHitRatio 0.63184
+ writeHits 4092
+ writeHitRatio 0.0710182
+ evictedDirtyPage 2906
+----------------------------------------
+hm_1_short.csv CACHEUS Algorithm
+Cache Size: 10000
+Total Calls: 57619
+Total Hits: 39792
+Hit Rate: 69.0606%
+Read Hits: 35744
+Write Hits: 4048
+Evicted Dirty Pages: 3205
+----------------------------------------
+hm_1_short.csv CACHEUS Algorithm
+Cache Size: 10000
+Total Calls: 57619
+Total Hits: 39792
+Hit Rate: 69.0606%
+Read Hits: 35744
+Write Hits: 4048
+Evicted Dirty Pages: 3205
+----------------------------------------
+hm_1_short.csv CACHEUS Algorithm
+Cache Size: 10000
+Total Calls: 57619
+Total Hits: 39792
+Hit Rate: 69.0606%
+Read Hits: 35744
+Write Hits: 4048
+Evicted Dirty Pages: 3205
+----------------------------------------
+hm_1_short.csv CACHEUS Algorithm
+Cache Size: 10000
+Total Calls: 57619
+Total Hits: 39792
+Hit Rate: 69.0606%
+Read Hits: 35744
+Write Hits: 4048
+Evicted Dirty Pages: 3205
+----------------------------------------
+mds_0.csv CACHEUS Algorithm
+Cache Size: 703
+Total Calls: 2905405
+Total Hits: 1268764
+Hit Rate: 43.6691%
+Read Hits: 48396
+Write Hits: 1220368
+Evicted Dirty Pages: 825741
+----------------------------------------
+mds_0.csv CACHEUS Algorithm
+Cache Size: 3514
+Total Calls: 2905405
+Total Hits: 1365202
+Hit Rate: 46.9884%
+Read Hits: 63062
+Write Hits: 1302140
+Evicted Dirty Pages: 742839
+----------------------------------------
+mds_0.csv mds_0.csv 
