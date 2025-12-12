@@ -258,4 +258,94 @@ Read Hits: 63062
 Write Hits: 1302140
 Evicted Dirty Pages: 742839
 ----------------------------------------
-mds_0.csv mds_0.csv 
+mds_0.csv mds_0.csv mds_0.csv mds_0.csv CACHEUS CacheSize 10000 calls 2905405 hits 1380291 hitRatio 0.475077 readHits 59019 readHitRatio 0.0203135 writeHits 1321272 writeHitRatio 0.454763 evictedDirtyPage 716626
+mds_0.csv CACHEUS Algorithm
+Cache Size: 10000
+Total Calls: 2905405
+Total Hits: 1380291
+Hit Rate: 47.5077%
+Read Hits: 59019
+Write Hits: 1321272
+Evicted Dirty Pages: 716626
+----------------------------------------
+mds_0.csv CACHEUS Algorithm
+Cache Size: 703
+Total Calls: 2905405
+Total Hits: 1242993
+Hit Rate: 42.7821%
+Read Hits: 47699
+Write Hits: 1195294
+Evicted Dirty Pages: 850756
+----------------------------------------
+mds_0.csv CACHEUS Algorithm
+Cache Size: 3514
+Total Calls: 2905405
+Total Hits: 1333553
+Hit Rate: 45.899%
+Read Hits: 52276
+Write Hits: 1281277
+Evicted Dirty Pages: 762795
+----------------------------------------
+mds_0.csv CACHEUS Algorithm
+Cache Size: 7028
+Total Calls: 2905405
+Total Hits: 1368432
+Hit Rate: 47.0995%
+Read Hits: 58328
+Write Hits: 1310104
+Evicted Dirty Pages: 730721
+----------------------------------------
+mds_0.csv CACHEUS Algorithm
+Cache Size: 35142
+Total Calls: 2905405
+Total Hits: 1937102
+Hit Rate: 66.6724%
+Read Hits: 76449
+Write Hits: 1860653
+Evicted Dirty Pages: 153812
+----------------------------------------
+mds_0.csv CACHEUS Algorithm
+Cache Size: 70284
+Total Calls: 2905405
+Total Hits: 1983857
+Hit Rate: 68.2816%
+Read Hits: 80300
+Write Hits: 1903557
+Evicted Dirty Pages: 79972
+----------------------------------------
+mds_0.csv CACHEUS Algorithm
+Cache Size: 140568
+Total Calls: 2905405
+Total Hits: 1991778
+Hit Rate: 68.5542%
+Read Hits: 87455
+Write Hits: 1904323
+Evicted Dirty Pages: 76042
+----------------------------------------
+mds_0.csv CACHEUS Algorithm
+Cache Size: 281137
+Total Calls: 2905405
+Total Hits: 1998512
+Hit Rate: 68.786%
+Read Hits: 90090
+Write Hits: 1908422
+Evicted Dirty Pages: 75153
+----------------------------------------
+mds_0.csv CACHEUS Algorithm
+Cache Size: 562274
+Total Calls: 2905405
+Total Hits: 2041759
+Hit Rate: 70.2745%
+Read Hits: 119510
+Write Hits: 1922249
+Evicted Dirty Pages: 49065
+----------------------------------------
+mds_0.csv CACHEUS Algorithm
+Cache Size: 632558
+Total Calls: 2905405
+Total Hits: 2031436
+Hit Rate: 69.9192%
+Read Hits: 123521
+Write Hits: 1907915
+Evicted Dirty Pages: 68499
+----------------------------------------

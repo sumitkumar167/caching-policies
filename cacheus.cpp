@@ -1,291 +1,336 @@
+/*
+  CACHEUS hybrid cache implementation
+  This file implements a combined expert-based cache (CACHEUS) that
+  adaptively chooses between an LRU expert (A) and an LFU expert (B).
+  Data structures:
+     - `table`: map from page -> PageInfo (tracks freq, dirty bit, iterators)
+     - `lruList`: global recency list for the LRU expert
+     - `freqBuckets`: map from frequency -> list of pages (LFU buckets)
+     - `lruHistory` / `lfuHistory`: regret/history lists used to adjust expert weights
+  The implementation maintains `minFreq` to speed up LFU victim selection.
+*/
 #include "cacheus.h"
+#include <cmath>
+#include <algorithm>
+#include <climits>
 
-CACHEUSCache::CACHEUSCache(int size) 
-    : capacity(size), calls(0), hits(0), readHits(0), 
-       writeHits(0), evictedDirtyPage(0), historyCapacity(std::ceil(size * 0.1)) , wA(0.5), wB(0.5) {
-    // Constructor implementation
-}
-
-CACHEUSCache::~CACHEUSCache(){
-    // Destructor implementation
+/*!
+    @brief: Constructor — initialize counters, capacities and heuristic defaults.
+    @details: `historyCapacity` is set as 10% of the cache size by default.
+    @param size: cache size in pages
+*/
+CACHEUSCache::CACHEUSCache(int size)
+    : capacity(size),
+      calls(0), hits(0), readHits(0), writeHits(0), evictedDirtyPage(0),
+      minFreq(1),
+      historyCapacity((int)std::ceil(size * 0.1)),
+      wA(0.5), wB(0.5)
+{
+    // Reserve buckets to reduce rehash costs on large traces
+    table.reserve((size_t)(capacity * 1.3) + 16);
+    lruHistoryIter.reserve((size_t)(historyCapacity * 1.3) + 16);
+    lfuHistoryIter.reserve((size_t)(historyCapacity * 1.3) + 16);
+    freqBuckets.reserve(128);
 }
 
 /*!
-  @brief: Helper function to mark page as recently used
-  @param: addr: page address
-  @param: rwtype: read/write type of page
+    @brief: Destructor — currently no special cleanup required.
 */
+CACHEUSCache::~CACHEUSCache() {}
 
+/*!
+    @brief: Check whether a rw string represents a write operation.
+    @param rw: string representing the operation type
+*/
+static inline bool isWrite(const std::string& rw) {
+    return (rw == "Write" || rw == "write" || rw == "W" || rw == "w");
+}
+
+/*!
+    @brief: Check whether a rw string represents a read operation.
+    @param rw: string representing the operation type
+*/
+static inline bool isRead(const std::string& rw) {
+        return (rw == "Read" || rw == "read" || rw == "R" || rw == "r");
+}
+
+/*!
+    @brief: Remove a page from its current LFU frequency bucket.
+    @details: Uses the iterator stored in PageInfo to perform O(1) erasure.
+    @param addr: page address to remove
+    @param info: PageInfo reference where the iterator and freq are stored
+*/
+void CACHEUSCache::removeFromFreqBucket(long long addr, PageInfo &info) {
+    auto fb = freqBuckets.find(info.freq);
+    if (fb == freqBuckets.end()) return;
+    fb->second.erase(info.freqIter);
+    // If list becomes empty, erase the bucket to keep map small
+    if (fb->second.empty()) {
+        freqBuckets.erase(fb);
+    }
+}
+
+/*!
+    @brief: Update `minFreq` after removing pages from frequency buckets.
+    @details: If the removed frequency was equal to `minFreq`, advance `minFreq`
+                     until a non-empty bucket is found.
+    @param removedFreq: frequency of the removed page
+*/
+void CACHEUSCache::fixMinFreqAfterRemoval(int removedFreq) {
+    if (removedFreq != minFreq) return;
+    // Advance minFreq until we find a non-empty bucket
+    while (true) {
+        auto it = freqBuckets.find(minFreq);
+        if (it != freqBuckets.end() && !it->second.empty()) return;
+        minFreq++;
+        // minFreq can grow; that's fine (amortized).
+        // No need to cap, because it only increases with total accesses.
+    }
+}
+
+/*!
+    @brief: Add a page to the front (MRU) of a frequency bucket.
+    @param addr: page address to add
+    @param info: PageInfo reference where the iterator and freq are stored
+    @param newFreq: target frequency bucket
+*/
+void CACHEUSCache::addToFreqBucketFront(long long addr, PageInfo &info, int newFreq) {
+    info.freq = newFreq;
+    auto &lst = freqBuckets[newFreq];
+    lst.push_front(addr);          // MRU at front
+    info.freqIter = lst.begin();
+}
+
+/*!
+    @brief: Handle a cache hit by updating LRU and LFU structures.
+    @details: Moves the page to the front of global LRU, increments its
+                     frequency in LFU buckets, and sets the dirty flag on writes.
+    @param addr: page address being accessed
+    @param rwtype: read/write operation type
+                     */
 void CACHEUSCache::touchPage(long long addr, const string &rwtype) {
     auto it = table.find(addr);
-    if (it != table.end()) {
-        // Update access type
-        //it->second.accessType = rwtype;
-        
-        if (it->second.lruIter != lruList.end()) {
-            // Move to front of LRU list
-            lruList.erase(it->second.lruIter);
-        }
+    if (it == table.end()) return;
 
-        lruList.push_front(addr);
-        it->second.lruIter = lruList.begin();
+    PageInfo &info = it->second;
 
-        // Update frequency count
-        it->second.freq++;
+    // Update global LRU (expert A)
+    lruList.erase(info.lruIter);
+    lruList.push_front(addr);
+    info.lruIter = lruList.begin();
 
-        // Track dierty bit if write
-        if (rwtype == "Write" || rwtype == "write" || rwtype == "W") {
-            it->second.dirty = true;
-        }
-    }
-    else {
-        // Page not found in cache
-        std::cerr << "Error: Attempting to touch a page not in cache." << std::endl;
-        return;
-    }
+    // Update LFU buckets (expert B)
+    int oldFreq = info.freq;
+    removeFromFreqBucket(addr, info);
+    int newFreq = oldFreq + 1;
+    addToFreqBucketFront(addr, info, newFreq);
+
+    // If we removed the last element of minFreq bucket, minFreq may need to move
+    fixMinFreqAfterRemoval(oldFreq);
+
+    // Dirty tracking
+    if (isWrite(rwtype)) info.dirty = true;
 }
 
 /*!
-  @brief: Helper function to insert a new page into the cache
-  @param: addr: page address
-  @param: rwtype: read/write type of page
+    @brief: Insert a new page into the cache.
+    @details: Adds the page to the front of the global LRU and the
+                     frequency-1 LFU bucket; initializes its dirty flag.
+    @param addr: page address being inserted
 */
 void CACHEUSCache::insertNewPage(long long addr, const string &rwtype) {
-    // Create new PageInfo
-    PageInfo pinfo;
-    pinfo.inCache = true;
-    pinfo.dirty = (rwtype == "Write" || rwtype == "write" || rwtype == "W");
-    pinfo.freq = 1;
-
-    // Insert into LRU list at front
+    // Insert into global LRU list
     lruList.push_front(addr);
-    pinfo.lruIter = lruList.begin();
 
-    // Insert into table
-    table[addr] = pinfo;
+    PageInfo info;
+    info.dirty = isWrite(rwtype);
+    info.freq  = 1;
+    info.lruIter = lruList.begin();
+
+    // Insert into LFU bucket freq=1 (MRU front)
+    auto &lst = freqBuckets[1];
+    lst.push_front(addr);
+    info.freqIter = lst.begin();
+
+    table.emplace(addr, info);
+
+    // New pages always set minFreq=1
+    minFreq = 1;
 }
 
 /*!
-  @brief: Helper function to choose victim page using LRU policy (A)
+    @brief: Choose a victim using the LRU expert (least recently used).
+    @details: Returns the LRU page (back of the list).
+    @return: address of the victim page, or -1 if cache is empty
 */
 long long CACHEUSCache::chooseVictimLRU() const {
-    if (lruList.empty()) {
-        std::cerr << "Error: LRU list is empty." << std::endl;
-        return -1;
-    }
-    // Victim is the least recently used page (back of LRU list)
+    if (lruList.empty()) return -1;
     return lruList.back();
 }
 
 /*!
-  @brief: Helper function to choose victim page using LFU policy (B)
+    @brief: Choose a victim according to the LFU expert.
+    @details: Uses `minFreq` as a hint and applies CR-LFU tie-break (evict MRU
+                     among the minimum-frequency bucket).
+    @return: address of the victim page, or -1 if cache is empty
 */
-long long CACHEUSCache::chooseVictimLFU() const {
-    if (lruList.empty()) {
-        std::cerr << "Error: Cache is empty." << std::endl;
-        return -1;
+long long CACHEUSCache::chooseVictimLFU() {
+    // Ensure minFreq points to an existing bucket
+    auto it = freqBuckets.find(minFreq);
+    while (it == freqBuckets.end() || it->second.empty()) {
+        minFreq++;
+        it = freqBuckets.find(minFreq);
+        if (minFreq > INT_MAX / 2) return chooseVictimLRU(); // extreme safeguard
     }
-
-    // Find the page with the minimum frequency count
-    long long victimAddr = -1;
-    int minFreq = INT_MAX;
-
-    for (auto it = lruList.rbegin(); it != lruList.rend(); ++it) {
-        long long addr = *it;
-        auto pageIt = table.find(addr);
-        if (pageIt != table.end()) {
-            if (pageIt->second.freq < minFreq) {
-                minFreq = pageIt->second.freq;
-                victimAddr = addr;
-            }
-        }
-    }
-
-    if (victimAddr == -1) {
-        std::cerr << "Error: Unable to find victim page using LFU." << std::endl;
-        // Fallback to LRU if LFU fails (shouldn't happen if cache isn't empty)
-        victimAddr = chooseVictimLRU();
-    }
-    return victimAddr;
+    // CR-LFU tie-break (per paper): MRU among min-freq items → front()
+    return it->second.front();
 }
 
 /*!
-  @brief: Helper function to add a victim page to LRU history
-  @param: victim: page address of victim
+    @brief: Record an evicted victim into the LRU regret/history (expert A).
+    @details: Keeps history bounded and stores iterators for O(1) removal.
+    @param victim: address of the evicted page
 */
 void CACHEUSCache::addToHistoryA(long long victim) {
-    // LRU expert history update
     auto it = lruHistoryIter.find(victim);
-    if (it != lruHistoryIter.end()) {
-        // Remove from history if already present
-        lruHistory.erase(it->second);
-    }
+    if (it != lruHistoryIter.end()) lruHistory.erase(it->second);
 
-    // Add victim to LRU history
     lruHistory.push_front(victim);
     lruHistoryIter[victim] = lruHistory.begin();
 
-    // Maintain history capacity (capacity / 2)
     while ((int)lruHistory.size() > historyCapacity) {
-        long long oldVictim = lruHistory.back();
+        long long old = lruHistory.back();
         lruHistory.pop_back();
-        lruHistoryIter.erase(oldVictim);
+        lruHistoryIter.erase(old);
     }
 }
 
 /*!
-  @brief: Helper function to add a victim page to LFU history
-  @param: victim: page address of victim
+    @brief: Record an evicted victim into the LFU regret/history (expert B).
+    @details: Keeps history bounded and stores iterators for O(1) removal.
+    @param victim: address of the evicted page
 */
 void CACHEUSCache::addToHistoryB(long long victim) {
-    // LFU expert history update
     auto it = lfuHistoryIter.find(victim);
-    if (it != lfuHistoryIter.end()) {
-        // Remove from history if already present
-        lfuHistory.erase(it->second);
-    }
-    // Add victim to LFU history
+    if (it != lfuHistoryIter.end()) lfuHistory.erase(it->second);
+
     lfuHistory.push_front(victim);
     lfuHistoryIter[victim] = lfuHistory.begin();
-    // Maintain history capacity (capacity / 2)
+
     while ((int)lfuHistory.size() > historyCapacity) {
-        long long oldVictim = lfuHistory.back();
+        long long old = lfuHistory.back();
         lfuHistory.pop_back();
-        lfuHistoryIter.erase(oldVictim);
+        lfuHistoryIter.erase(old);
     }
 }
 
 /*!
-  @brief: Helper function to update expert weights based on history hits
-  @param: addr: page address being referenced
+    @brief: Update expert weights based on regret history hits.
+    @details: If the missed page is present in one history (A or B) but not the
+                     other, slightly favor that expert by adjusting wA/wB.
+    @param addr: address of the missed page
 */
 void CACHEUSCache::updateWeightsFromHistory(long long addr) {
-    bool inA = false;
-    bool inB = false;
+    bool inA = false, inB = false;
 
-    // Check if addr is in LRU history
     auto itA = lruHistoryIter.find(addr);
     if (itA != lruHistoryIter.end()) {
         inA = true;
         lruHistory.erase(itA->second);
         lruHistoryIter.erase(itA);
-        //lruHistory.erase(itA);
     }
 
-    // Check if addr is in LFU history
     auto itB = lfuHistoryIter.find(addr);
     if (itB != lfuHistoryIter.end()) {
         inB = true;
         lfuHistory.erase(itB->second);
         lfuHistoryIter.erase(itB);
-        //lfuHistory.erase(itB);
     }
 
-    // If a miss happens on spmething evicted by A (LRU), penalize A, reward B (LFU)
-    // and vice versa
-
-    // Learning rate
     const double alpha = 0.1;
-
-    // Update weights based on history hits
-    if (inA && inB) {
-        // Both experts predicted this page - no change
-        return;
-    } else if (inA && !inB) {
-        // Only LRU predicted this page
+    if (inA && !inB) {
+        // Favor LRU slightly
         wA = std::max(0.0, wA - alpha);
         wB = 1.0 - wA;
-    } else if (inB) {
-        // Only LFU predicted this page
+    } else if (inB && !inA) {
+        // Favor LFU slightly
         wB = std::max(0.0, wB - alpha);
         wA = 1.0 - wB;
-    } else {
-        // Neither predicted this page - no change
-        return;
     }
 }
 
 /*!
-  @brief: Helper function to evict a page and insert a new page when cache is full
-  @param: addr: page address to insert
-  @param: rwtype: read/write type of page
+    @brief: Evict a victim (by favored expert) and insert a new page.
+    @details: Updates dirty-eviction counts, removes entries from both experts,
+                     records regret, and inserts the new page.
+    @param addr: page address being inserted
+    @param rwtype: read/write operation type
 */
 void CACHEUSCache::evictAndInsert(long long addr, const string &rwtype) {
-    if (capacity <= 0) {
-        std::cerr << "Error: Cache capacity is zero." << std::endl;
-        return;
-    }
+    if (capacity <= 0) return;
 
-    // Choose which expert to follow (pick higher weight expert)
     bool useLRU = (wA >= wB);
-
     long long victim = useLRU ? chooseVictimLRU() : chooseVictimLFU();
     if (victim == -1) {
-        std::cerr << "Error: No victim selected for eviction." << std::endl;
-        // Should not happen, but safeguard, treat as empty cache
         insertNewPage(addr, rwtype);
         return;
     }
 
-    // Update dirty page eviction count
-    auto victimIt = table.find(victim);
-    if (victimIt != table.end()) {
-        if (victimIt->second.dirty) {
-            evictedDirtyPage++;
-        }
+    auto vit = table.find(victim);
+    if (vit != table.end()) {
+        PageInfo &vinfo = vit->second;
+
+        if (vinfo.dirty) evictedDirtyPage++;
+
+        // Remove from global LRU
+        lruList.erase(vinfo.lruIter);
+
+        // Remove from LFU bucket
+        int oldFreq = vinfo.freq;
+        removeFromFreqBucket(victim, vinfo);
+        fixMinFreqAfterRemoval(oldFreq);
+
+        // Remove from table
+        table.erase(vit);
     }
 
-    // Remove victim from cache structures
-    if (victimIt != table.end()) {
-        lruList.erase(victimIt->second.lruIter);
-        table.erase(victimIt);
-    }
+    // Record regret history
+    if (useLRU) addToHistoryA(victim);
+    else        addToHistoryB(victim);
 
-    // Add to appropriate history
-    if (useLRU) {
-        addToHistoryA(victim);
-    } else {
-        addToHistoryB(victim);
-    }
-
-    // Insert the new page
     insertNewPage(addr, rwtype);
 }
 
 /*!
-  @brief: Main access function to reference a page
-  @param: addr: page address
-  @param: rwtype: read/write type of page
+    @brief: Process a cache reference (hit or miss).
+    @details: On hit updates stats and moves the page in both experts. On miss
+                     consults history for weight updates and inserts/evicts accordingly.
+    @param addr: page address being accessed
+    @param rwtype: read/write operation type
 */
 void CACHEUSCache::refer(long long int addr, string rwtype) {
     calls++;
+
     auto it = table.find(addr);
     if (it != table.end()) {
-        // Page hit
+        // HIT: update stats and move the page
         hits++;
-        if (rwtype == "W" || rwtype == "write" || rwtype == "Write") {
-            writeHits++;
-        } else if (rwtype == "R" || rwtype == "read" || rwtype == "Read"){
-            readHits++;
-        }
+        if (isWrite(rwtype)) writeHits++;
+        else if (isRead(rwtype)) readHits++;
+
         touchPage(addr, rwtype);
         return;
-    } 
+    }
 
-    // Page miss
-    // Use history to update expert weights based on who evicted this page
+    // MISS: adjust expert weights from regret history and bring page in
     updateWeightsFromHistory(addr);
 
-    // If cache is full, evict a page
-    if ((int)table.size() < capacity) {
-        insertNewPage(addr, rwtype);
-    } else {
-        evictAndInsert(addr, rwtype);
-    }
+    if ((int)table.size() < capacity) insertNewPage(addr, rwtype);
+    else evictAndInsert(addr, rwtype);
 }
 
 /*!
-  @brief: Summary function to print cache hit statistics
+    @brief: Summary function to print cache hit statistics.
 */
 void CACHEUSCache::cacheHits() {
     std::cout << "Total Calls: " << calls << std::endl;
