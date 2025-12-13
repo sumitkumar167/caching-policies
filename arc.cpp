@@ -258,17 +258,16 @@ void ARCCache::cacheHitsSummary()
 
     ofstream result("ExperimentalResult.txt", ios_base::app);
     if (result.is_open()) {
-        result << "ARC " << endl;
-        result    << "CacheSize " << p->c << endl;
-        result       << " calls " << p->calls << endl;
-        result       << " hits " << p->hits << endl;
-        result       << " hitRatio " << (p->calls > 0 ? (double)p->hits / (double)p->calls : 0.0) << endl;
-        result       << " readHits " << p->readHits << endl;
-        result       << " readHitRatio " << (p->calls > 0 ? (double)p->readHits / (double)p->calls : 0.0) << endl;
-        result       << " writeHits " << p->writeHits << endl;
-        result       << " writeHitRatio " << (p->calls > 0 ? (double)p->writeHits / (double)p->calls : 0.0) << endl;
-        result       << " evictedDirtyPage " << p->evictedDirtyPage << endl;
-        result       << "----------------------------------------" << endl;
+        result << "ARC " 
+            << "CacheSize " << p->c 
+               << " calls " << p->calls 
+               << " hits " << p->hits 
+               << " hitRatio " << (p->calls > 0 ? (double)p->hits / (double)p->calls : 0.0) 
+               << " readHits " << p->readHits 
+               << " readHitRatio " << (p->calls > 0 ? (double)p->readHits / (double)p->calls : 0.0) 
+               << " writeHits " << p->writeHits 
+               << " writeHitRatio " << (p->calls > 0 ? (double)p->writeHits / (double)p->calls : 0.0) 
+               << " evictedDirtyPage " << p->evictedDirtyPage << endl;
         result.close();
     }
     result.close();

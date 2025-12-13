@@ -1,351 +1,180 @@
-hm_1_short.csv LRU CacheSize 1 calls 57619 hits 1 hitRatio 1.73554e-05 readHits 0 readHitRatio 0 writeHits 1 writeHitRatio 1.73554e-05 evictedDirtyPage 13205
-hm_1_short.csv LRU CacheSize 1 calls 57619 hits 1 hitRatio 1.73554e-05 readHits 0 readHitRatio 0 writeHits 1 writeHitRatio 1.73554e-05 evictedDirtyPage 13205
-hm_1_short.csv hm_1_short.csv hm_1_short.csv hm_1_short.csv LFU Algorithm
-Cache Size: 1
-Total Calls: 57619
-Total Hits: 1
-Hit Rate: 0.00173554%
-Read Hits: 0
-Write Hits: 1
-Evicted Dirty Pages: 13205
-----------------------------------------
-hm_1_short.csv LFU Algorithm
-Cache Size: 1
-Total Calls: 57619
-Total Hits: 1
-Hit Rate: 0.00173554%
-Read Hits: 0
-Write Hits: 1
-Evicted Dirty Pages: 13205
-----------------------------------------
-hm_1_short.csv LFU Algorithm
-Cache Size: 1
-Total Calls: 57619
-Total Hits: 1
-Hit Rate: 0.00173554%
-Read Hits: 0
-Write Hits: 1
-Evicted Dirty Pages: 13205
-----------------------------------------
-hm_1_short.csv LFU Algorithm
-Cache Size: 20
-Total Calls: 57619
-Total Hits: 320
-Hit Rate: 0.555372%
-Read Hits: 242
-Write Hits: 78
-Evicted Dirty Pages: 13175
-----------------------------------------
-hm_1_short.csv LFU Algorithm
-Cache Size: 100
-Total Calls: 57619
-Total Hits: 3022
-Hit Rate: 5.2448%
-Read Hits: 2650
-Write Hits: 372
-Evicted Dirty Pages: 13020
-----------------------------------------
-hm_1_short.csv LFU Algorithm
-Cache Size: 1000
-Total Calls: 57619
-Total Hits: 20620
-Hit Rate: 35.7868%
-Read Hits: 18488
-Write Hits: 2132
-Evicted Dirty Pages: 11480
-----------------------------------------
-hm_1_short.csv LFU Algorithm
-Cache Size: 1000
-Total Calls: 57619
-Total Hits: 20620
-Hit Rate: 35.7868%
-Read Hits: 18488
-Write Hits: 2132
-Evicted Dirty Pages: 11480
-----------------------------------------
-hm_1_short.csv hm_1_short.csv hm_1_short.csv hm_1_short.csv hm_1_short.csv LFU Algorithm
-Cache Size: 1000
-Total Calls: 57619
-Total Hits: 20620
-Hit Rate: 35.7868%
-Read Hits: 18488
-Write Hits: 2132
-Evicted Dirty Pages: 11480
-----------------------------------------
-hm_1_short.csv hm_1_short.csv hm_1_short.csv hm_1_short.csv LFU Algorithm
-Cache Size: 10
-Total Calls: 57619
-Total Hits: 178
-Hit Rate: 0.308926%
-Read Hits: 123
-Write Hits: 55
-Evicted Dirty Pages: 13148
-----------------------------------------
-hm_1_short.csv LFU Algorithm
-Cache Size: 100
-Total Calls: 57619
-Total Hits: 3215
-Hit Rate: 5.57976%
-Read Hits: 2902
-Write Hits: 313
-Evicted Dirty Pages: 12882
-----------------------------------------
-hm_1_short.csv LFU Algorithm
-Cache Size: 1000
-Total Calls: 57619
-Total Hits: 21049
-Hit Rate: 36.5314%
-Read Hits: 18616
-Write Hits: 2433
-Evicted Dirty Pages: 10552
-----------------------------------------
-hm_1_short.csv LFU Algorithm
-Cache Size: 10000
-Total Calls: 57619
-Total Hits: 40498
-Hit Rate: 70.2858%
-Read Hits: 36406
-Write Hits: 4092
-Evicted Dirty Pages: 2906
-----------------------------------------
-hm_1_short.csv LFU Algorithm
-Cache Size: 10000
-Total Calls: 57619
-Total Hits: 40498
-Hit Rate: 70.2858%
-Read Hits: 36406
-Write Hits: 4092
-Evicted Dirty Pages: 2906
-----------------------------------------
-hm_1_short.csv CACHEUS Algorithm
-Cache Size: 100
-Total Calls: 57619
-Total Hits: 4196
-Hit Rate: 7.28232%
-Read Hits: 3752
-Write Hits: 444
-Evicted Dirty Pages: 12874
-----------------------------------------
-hm_1_short.csv hm_1_short.csv hm_1_short.csv hm_1_short.csv hm_1_short.csv LFU Algorithm
-Cache Size: 100
-Total Calls: 57619
-Total Hits: 3215
-Hit Rate: 5.57976%
-Read Hits: 2902
-Write Hits: 313
-Evicted Dirty Pages: 12882
-----------------------------------------
-hm_1_short.csv LRU CacheSize 100 calls 57619 hits 3006 hitRatio 0.0521703 readHits 2624 readHitRatio 0.0455405 writeHits 382 writeHitRatio 0.00662976 evictedDirtyPage 12996
-hm_1_short.csv CACHEUS Algorithm
-Cache Size: 100
-Total Calls: 57619
-Total Hits: 4196
-Hit Rate: 7.28232%
-Read Hits: 3752
-Write Hits: 444
-Evicted Dirty Pages: 12874
-----------------------------------------
-hm_1_short.csv LFU Algorithm
-Cache Size: 100
-Total Calls: 57619
-Total Hits: 3215
-Hit Rate: 5.57976%
-Read Hits: 2902
-Write Hits: 313
-Evicted Dirty Pages: 12882
-----------------------------------------
-hm_1_short.csv LIRS CacheSize 1 calls 57619 hits 0 hitRatio 0 readHits 44412 readHitRatio 0.770787 writeHits 13207 writeHitRatio 0.229213 evictedDirtyPage 29077
-hm_1_short.csv LIRS CacheSize 100 calls 57619 hits 0 hitRatio 0 readHits 44412 readHitRatio 0.770787 writeHits 13207 writeHitRatio 0.229213 evictedDirtyPage 29077
-hm_1_short.csv LIRS CacheSize 100 calls 57619 hits 1 hitRatio 1.73554e-05 readHits 44412 readHitRatio 0.770787 writeHits 13207 writeHitRatio 0.229213 evictedDirtyPage 29077
-hm_1_short.csv LIRS CacheSize 100 calls 57619 hits 4574 hitRatio 0.0793835 readHits 4057 readHitRatio 0.0704108 writeHits 517 writeHitRatio 0.00897273 evictedDirtyPage 12888
-hm_1_short.csv LIRS CacheSize 100 calls 57619 hits 4574 hitRatio 0.0793835 readHits 4057 readHitRatio 0.0704108 writeHits 517 writeHitRatio 0.00897273 evictedDirtyPage 12888
-hm_1_short.csv LIRS 
-CacheSize 100
- calls 57619
- hits 4574
- hitRatio 0.0793835
- readHits 4057
- readHitRatio 0.0704108
- writeHits 517
- writeHitRatio 0.00897273
- evictedDirtyPage 12888
-----------------------------------------
-hm_1_short.csv LIRS 
-CacheSize 1000
- calls 57619
- hits 24288
- hitRatio 0.421528
- readHits 21596
- readHitRatio 0.374807
- writeHits 2692
- writeHitRatio 0.0467207
- evictedDirtyPage 11105
-----------------------------------------
-hm_1_short.csv LIRS 
-CacheSize 10000
- calls 57619
- hits 40750
- hitRatio 0.707232
- readHits 35844
- readHitRatio 0.622086
- writeHits 4906
- writeHitRatio 0.0851455
- evictedDirtyPage 4301
-----------------------------------------
-hm_1_short.csv hm_1_short.csv ARC CacheSize 10000 calls 57619 hits 40498 hitRatio 0.702858 readHits 36406 readHitRatio 0.63184 writeHits 4092 writeHitRatio 0.0710182 evictedDirtyPage 2906
-hm_1_short.csv ARC 
-CacheSize 10000
- calls 57619
- hits 40498
- hitRatio 0.702858
- readHits 36406
- readHitRatio 0.63184
- writeHits 4092
- writeHitRatio 0.0710182
- evictedDirtyPage 2906
-----------------------------------------
-hm_1_short.csv CACHEUS Algorithm
-Cache Size: 10000
-Total Calls: 57619
-Total Hits: 39792
-Hit Rate: 69.0606%
-Read Hits: 35744
-Write Hits: 4048
-Evicted Dirty Pages: 3205
-----------------------------------------
-hm_1_short.csv CACHEUS Algorithm
-Cache Size: 10000
-Total Calls: 57619
-Total Hits: 39792
-Hit Rate: 69.0606%
-Read Hits: 35744
-Write Hits: 4048
-Evicted Dirty Pages: 3205
-----------------------------------------
-hm_1_short.csv CACHEUS Algorithm
-Cache Size: 10000
-Total Calls: 57619
-Total Hits: 39792
-Hit Rate: 69.0606%
-Read Hits: 35744
-Write Hits: 4048
-Evicted Dirty Pages: 3205
-----------------------------------------
-hm_1_short.csv CACHEUS Algorithm
-Cache Size: 10000
-Total Calls: 57619
-Total Hits: 39792
-Hit Rate: 69.0606%
-Read Hits: 35744
-Write Hits: 4048
-Evicted Dirty Pages: 3205
-----------------------------------------
-mds_0.csv CACHEUS Algorithm
-Cache Size: 703
-Total Calls: 2905405
-Total Hits: 1268764
-Hit Rate: 43.6691%
-Read Hits: 48396
-Write Hits: 1220368
-Evicted Dirty Pages: 825741
-----------------------------------------
-mds_0.csv CACHEUS Algorithm
-Cache Size: 3514
-Total Calls: 2905405
-Total Hits: 1365202
-Hit Rate: 46.9884%
-Read Hits: 63062
-Write Hits: 1302140
-Evicted Dirty Pages: 742839
-----------------------------------------
-mds_0.csv mds_0.csv mds_0.csv mds_0.csv CACHEUS CacheSize 10000 calls 2905405 hits 1380291 hitRatio 0.475077 readHits 59019 readHitRatio 0.0203135 writeHits 1321272 writeHitRatio 0.454763 evictedDirtyPage 716626
-mds_0.csv CACHEUS Algorithm
-Cache Size: 10000
-Total Calls: 2905405
-Total Hits: 1380291
-Hit Rate: 47.5077%
-Read Hits: 59019
-Write Hits: 1321272
-Evicted Dirty Pages: 716626
-----------------------------------------
-mds_0.csv CACHEUS Algorithm
-Cache Size: 703
-Total Calls: 2905405
-Total Hits: 1242993
-Hit Rate: 42.7821%
-Read Hits: 47699
-Write Hits: 1195294
-Evicted Dirty Pages: 850756
-----------------------------------------
-mds_0.csv CACHEUS Algorithm
-Cache Size: 3514
-Total Calls: 2905405
-Total Hits: 1333553
-Hit Rate: 45.899%
-Read Hits: 52276
-Write Hits: 1281277
-Evicted Dirty Pages: 762795
-----------------------------------------
-mds_0.csv CACHEUS Algorithm
-Cache Size: 7028
-Total Calls: 2905405
-Total Hits: 1368432
-Hit Rate: 47.0995%
-Read Hits: 58328
-Write Hits: 1310104
-Evicted Dirty Pages: 730721
-----------------------------------------
-mds_0.csv CACHEUS Algorithm
-Cache Size: 35142
-Total Calls: 2905405
-Total Hits: 1937102
-Hit Rate: 66.6724%
-Read Hits: 76449
-Write Hits: 1860653
-Evicted Dirty Pages: 153812
-----------------------------------------
-mds_0.csv CACHEUS Algorithm
-Cache Size: 70284
-Total Calls: 2905405
-Total Hits: 1983857
-Hit Rate: 68.2816%
-Read Hits: 80300
-Write Hits: 1903557
-Evicted Dirty Pages: 79972
-----------------------------------------
-mds_0.csv CACHEUS Algorithm
-Cache Size: 140568
-Total Calls: 2905405
-Total Hits: 1991778
-Hit Rate: 68.5542%
-Read Hits: 87455
-Write Hits: 1904323
-Evicted Dirty Pages: 76042
-----------------------------------------
-mds_0.csv CACHEUS Algorithm
-Cache Size: 281137
-Total Calls: 2905405
-Total Hits: 1998512
-Hit Rate: 68.786%
-Read Hits: 90090
-Write Hits: 1908422
-Evicted Dirty Pages: 75153
-----------------------------------------
-mds_0.csv CACHEUS Algorithm
-Cache Size: 562274
-Total Calls: 2905405
-Total Hits: 2041759
-Hit Rate: 70.2745%
-Read Hits: 119510
-Write Hits: 1922249
-Evicted Dirty Pages: 49065
-----------------------------------------
-mds_0.csv CACHEUS Algorithm
-Cache Size: 632558
-Total Calls: 2905405
-Total Hits: 2031436
-Hit Rate: 69.9192%
-Read Hits: 123521
-Write Hits: 1907915
-Evicted Dirty Pages: 68499
-----------------------------------------
+mds_1.csv LRU CacheSize 703 calls 23264405 hits 51684 hitRatio 0.00222159 readHits 7972 readHitRatio 0.000342669 writeHits 43712 writeHitRatio 0.00187892 evictedDirtyPage 366412
+mds_1.csv LRU CacheSize 3514 calls 23264405 hits 82588 hitRatio 0.00354997 readHits 34128 readHitRatio 0.00146696 writeHits 48460 writeHitRatio 0.00208301 evictedDirtyPage 359177
+mds_1.csv LRU CacheSize 7028 calls 23264405 hits 96663 hitRatio 0.00415497 readHits 47727 readHitRatio 0.0020515 writeHits 48936 writeHitRatio 0.00210347 evictedDirtyPage 355348
+mds_1.csv LRU CacheSize 35142 calls 23264405 hits 222485 hitRatio 0.00956332 readHits 89143 readHitRatio 0.00383173 writeHits 133342 writeHitRatio 0.00573159 evictedDirtyPage 251799
+mds_1.csv LRU CacheSize 70284 calls 23264405 hits 390194 hitRatio 0.0167721 readHits 239214 readHitRatio 0.0102824 writeHits 150980 writeHitRatio 0.00648974 evictedDirtyPage 234161
+mds_1.csv LRU CacheSize 140568 calls 23264405 hits 448433 hitRatio 0.0192755 readHits 279782 readHitRatio 0.0120262 writeHits 168651 writeHitRatio 0.00724932 evictedDirtyPage 216498
+mds_1.csv LRU CacheSize 281137 calls 23264405 hits 493715 hitRatio 0.0212219 readHits 288224 readHitRatio 0.0123891 writeHits 205491 writeHitRatio 0.00883285 evictedDirtyPage 179640
+mds_1.csv LRU CacheSize 562274 calls 23264405 hits 517592 hitRatio 0.0222482 readHits 292769 readHitRatio 0.0125844 writeHits 224823 writeHitRatio 0.00966382 evictedDirtyPage 95571
+mds_1.csv LRU CacheSize 632558 calls 23264405 hits 517649 hitRatio 0.0222507 readHits 292769 readHitRatio 0.0125844 writeHits 224880 writeHitRatio 0.00966627 evictedDirtyPage 95506
+mds_1.csv LFU AlgorithmCache Size: 703Total Calls: 23264405Total Hits: 32434Hit Rate: 0.139415%Read Hits: 51Write Hits: 32383Evicted Dirty Pages: 372592
+mds_1.csv LFU AlgorithmCache Size: 3514Total Calls: 23264405Total Hits: 71741Hit Rate: 0.308372%Read Hits: 177Write Hits: 71564Evicted Dirty Pages: 333405
+mds_1.csv LFU AlgorithmCache Size: 7028Total Calls: 23264405Total Hits: 102050Hit Rate: 0.438653%Read Hits: 3392Write Hits: 98658Evicted Dirty Pages: 305540
+mds_1.csv LFU AlgorithmCache Size: 35142Total Calls: 23264405Total Hits: 295206Hit Rate: 1.26892%Read Hits: 86570Write Hits: 208636Evicted Dirty Pages: 182426
+mds_1.csv LFU AlgorithmCache Size: 70284Total Calls: 23264405Total Hits: 429804Hit Rate: 1.84747%Read Hits: 175551Write Hits: 254253Evicted Dirty Pages: 129237
+mds_1.csv LFU AlgorithmCache Size: 140568Total Calls: 23264405Total Hits: 639184Hit Rate: 2.74748%Read Hits: 384009Write Hits: 255175Evicted Dirty Pages: 85798
+mds_1.csv LFU AlgorithmCache Size: 281137Total Calls: 23264405Total Hits: 795026Hit Rate: 3.41735%Read Hits: 539734Write Hits: 255292Evicted Dirty Pages: 85626
+mds_1.csv LFU AlgorithmCache Size: 562274Total Calls: 23264405Total Hits: 795093Hit Rate: 3.41764%Read Hits: 539746Write Hits: 255347Evicted Dirty Pages: 21546
+mds_1.csv LFU AlgorithmCache Size: 632558Total Calls: 23264405Total Hits: 795093Hit Rate: 3.41764%Read Hits: 539746Write Hits: 255347Evicted Dirty Pages: 21538
+mds_1.csv LIRS CacheSize 703 calls 23264405 hits 46973 hitRatio 0.00201909 readHits 17059 writeHits 29914 evictedDirtyPage 374500
+mds_1.csv LIRS CacheSize 3514 calls 23264405 hits 84760 hitRatio 0.00364333 readHits 38893 writeHits 45867 evictedDirtyPage 356469
+mds_1.csv LIRS CacheSize 7028 calls 23264405 hits 116813 hitRatio 0.0050211 readHits 53154 writeHits 63659 evictedDirtyPage 336863
+mds_1.csv LIRS CacheSize 35142 calls 23264405 hits 263039 hitRatio 0.0113065 readHits 130502 writeHits 132537 evictedDirtyPage 255683
+mds_1.csv LIRS CacheSize 70284 calls 23264405 hits 384699 hitRatio 0.0165359 readHits 214364 writeHits 170335 evictedDirtyPage 217870
+mds_1.csv LIRS CacheSize 140568 calls 23264405 hits 582055 hitRatio 0.0250191 readHits 341451 writeHits 240604 evictedDirtyPage 141767
+mds_1.csv LIRS CacheSize 281137 calls 23264405 hits 830565 hitRatio 0.0357011 readHits 575318 writeHits 255247 evictedDirtyPage 85145
+mds_1.csv LIRS CacheSize 562274 calls 23264405 hits 889792 hitRatio 0.0382469 readHits 634447 writeHits 255345 evictedDirtyPage 83745
+mds_1.csv LIRS CacheSize 632558 calls 23264405 hits 889792 hitRatio 0.0382469 readHits 634447 writeHits 255345 evictedDirtyPage 83725
+mds_1.csv ARC CacheSize 703 calls 23264405 hits 1070004 hitRatio 0.0459932 readHits 863803 readHitRatio 0.0371298 writeHits 206201 writeHitRatio 0.00886337 evictedDirtyPage 48333
+mds_1.csv ARC CacheSize 3514 calls 23264405 hits 93139 hitRatio 0.0040035 readHits 35203 readHitRatio 0.00151317 writeHits 57936 writeHitRatio 0.00249033 evictedDirtyPage 349931
+mds_1.csv ARC CacheSize 7028 calls 23264405 hits 117627 hitRatio 0.00505609 readHits 49980 readHitRatio 0.00214835 writeHits 67647 writeHitRatio 0.00290775 evictedDirtyPage 340474
+mds_1.csv ARC CacheSize 35142 calls 23264405 hits 269707 hitRatio 0.0115931 readHits 114225 readHitRatio 0.00490986 writeHits 155482 writeHitRatio 0.00668326 evictedDirtyPage 232926
+mds_1.csv ARC CacheSize 70284 calls 23264405 hits 426454 hitRatio 0.0183308 readHits 246433 readHitRatio 0.0105927 writeHits 180021 writeHitRatio 0.00773804 evictedDirtyPage 208384
+mds_1.csv ARC CacheSize 140568 calls 23264405 hits 664024 hitRatio 0.0285425 readHits 447852 readHitRatio 0.0192505 writeHits 216172 writeHitRatio 0.00929196 evictedDirtyPage 139977
+mds_1.csv ARC CacheSize 281137 calls 23264405 hits 795046 hitRatio 0.0341744 readHits 539734 readHitRatio 0.0232 writeHits 255312 writeHitRatio 0.0109744 evictedDirtyPage 85606
+mds_1.csv ARC CacheSize 562274 calls 23264405 hits 795093 hitRatio 0.0341764 readHits 539746 readHitRatio 0.0232005 writeHits 255347 writeHitRatio 0.0109759 evictedDirtyPage 21546
+mds_1.csv ARC CacheSize 632558 calls 23264405 hits 795093 hitRatio 0.0341764 readHits 539746 readHitRatio 0.0232005 writeHits 255347 writeHitRatio 0.0109759 evictedDirtyPage 21538
+mds_1.csv CACHEUS AlgorithmCache Size: 703Total Calls: 23264405Total Hits: 50643Hit Rate: 0.217684%Read Hits: 11166Write Hits: 39477Evicted Dirty Pages: 370587
+mds_1.csv CACHEUS AlgorithmCache Size: 3514Total Calls: 23264405Total Hits: 88012Hit Rate: 0.378312%Read Hits: 39406Write Hits: 48606Evicted Dirty Pages: 359014
+mds_1.csv CACHEUS AlgorithmCache Size: 7028Total Calls: 23264405Total Hits: 105265Hit Rate: 0.452472%Read Hits: 56328Write Hits: 48937Evicted Dirty Pages: 355340
+mds_1.csv CACHEUS AlgorithmCache Size: 35142Total Calls: 23264405Total Hits: 225915Hit Rate: 0.971076%Read Hits: 85684Write Hits: 140231Evicted Dirty Pages: 244907
+mds_1.csv CACHEUS AlgorithmCache Size: 70284Total Calls: 23264405Total Hits: 405596Hit Rate: 1.74342%Read Hits: 228141Write Hits: 177455Evicted Dirty Pages: 207683
+mds_1.csv CACHEUS AlgorithmCache Size: 140568Total Calls: 23264405Total Hits: 496498Hit Rate: 2.13415%Read Hits: 308739Write Hits: 187759Evicted Dirty Pages: 197379
+mds_1.csv CACHEUS AlgorithmCache Size: 281137Total Calls: 23264405Total Hits: 760378Hit Rate: 3.26842%Read Hits: 510984Write Hits: 249394Evicted Dirty Pages: 33942
+mds_1.csv CACHEUS AlgorithmCache Size: 562274Total Calls: 23264405Total Hits: 817909Hit Rate: 3.51571%Read Hits: 567762Write Hits: 250147Evicted Dirty Pages: 30120
+mds_1.csv CACHEUS AlgorithmCache Size: 632558Total Calls: 23264405Total Hits: 829677Hit Rate: 3.56629%Read Hits: 578383Write Hits: 251294Evicted Dirty Pages: 24424
+prn_0.csv LRU CacheSize 703 calls 17508521 hits 3950972 hitRatio 0.22566 readHits 87352 readHitRatio 0.00498911 writeHits 3863620 writeHitRatio 0.220671 evictedDirtyPage 10246064
+prn_0.csv LRU CacheSize 3514 calls 17508521 hits 5433421 hitRatio 0.31033 readHits 113317 readHitRatio 0.00647211 writeHits 5320104 writeHitRatio 0.303858 evictedDirtyPage 8809834
+prn_0.csv LRU CacheSize 7028 calls 17508521 hits 6294289 hitRatio 0.359499 readHits 179944 readHitRatio 0.0102775 writeHits 6114345 writeHitRatio 0.349221 evictedDirtyPage 8015432
+prn_0.csv LRU CacheSize 35142 calls 17508521 hits 7575413 hitRatio 0.43267 readHits 345878 readHitRatio 0.0197548 writeHits 7229535 writeHitRatio 0.412915 evictedDirtyPage 6875292
+prn_0.csv LRU CacheSize 70284 calls 17508521 hits 8382493 hitRatio 0.478767 readHits 502919 readHitRatio 0.0287242 writeHits 7879574 writeHitRatio 0.450042 evictedDirtyPage 6193005
+prn_0.csv LRU CacheSize 140568 calls 17508521 hits 9003098 hitRatio 0.514212 readHits 664207 readHitRatio 0.0379362 writeHits 8338891 writeHitRatio 0.476276 evictedDirtyPage 5640636
+prn_0.csv LRU CacheSize 281137 calls 17508521 hits 9564593 hitRatio 0.546282 readHits 858922 readHitRatio 0.0490574 writeHits 8705671 writeHitRatio 0.497225 evictedDirtyPage 5173645
+prn_0.csv LRU CacheSize 562274 calls 17508521 hits 10570300 hitRatio 0.603723 readHits 1264591 readHitRatio 0.0722272 writeHits 9305709 writeHitRatio 0.531496 evictedDirtyPage 4418071
+prn_0.csv LRU CacheSize 632558 calls 17508521 hits 10704334 hitRatio 0.611379 readHits 1294059 readHitRatio 0.0739102 writeHits 9410275 writeHitRatio 0.537468 evictedDirtyPage 4311324
+prn_0.csv LFU AlgorithmCache Size: 703Total Calls: 17508521Total Hits: 1956738Hit Rate: 11.1759%Read Hits: 28415Write Hits: 1928323Evicted Dirty Pages: 12113904
+prn_0.csv LFU AlgorithmCache Size: 3514Total Calls: 17508521Total Hits: 3015823Hit Rate: 17.2249%Read Hits: 48419Write Hits: 2967404Evicted Dirty Pages: 11072010
+prn_0.csv LFU AlgorithmCache Size: 7028Total Calls: 17508521Total Hits: 3922292Hit Rate: 22.4022%Read Hits: 81428Write Hits: 3840864Evicted Dirty Pages: 10196035
+prn_0.csv LFU AlgorithmCache Size: 35142Total Calls: 17508521Total Hits: 5479204Hit Rate: 31.2945%Read Hits: 149958Write Hits: 5329246Evicted Dirty Pages: 8682545
+prn_0.csv LFU AlgorithmCache Size: 70284Total Calls: 17508521Total Hits: 6430577Hit Rate: 36.7283%Read Hits: 265032Write Hits: 6165545Evicted Dirty Pages: 7816997
+prn_0.csv LFU AlgorithmCache Size: 140568Total Calls: 17508521Total Hits: 7617738Hit Rate: 43.5087%Read Hits: 503190Write Hits: 7114548Evicted Dirty Pages: 6810649
+prn_0.csv LFU AlgorithmCache Size: 281137Total Calls: 17508521Total Hits: 8942750Hit Rate: 51.0766%Read Hits: 925477Write Hits: 8017273Evicted Dirty Pages: 5786088
+prn_0.csv LFU AlgorithmCache Size: 562274Total Calls: 17508521Total Hits: 10661620Hit Rate: 60.8939%Read Hits: 1303200Write Hits: 9358420Evicted Dirty Pages: 4194026
+prn_0.csv LFU AlgorithmCache Size: 632558Total Calls: 17508521Total Hits: 10863836Hit Rate: 62.0489%Read Hits: 1336152Write Hits: 9527684Evicted Dirty Pages: 3955938
+prn_0.csv LIRS CacheSize 703 calls 17508521 hits 4170381 hitRatio 0.238192 readHits 55878 writeHits 4114503 evictedDirtyPage 9934374
+prn_0.csv LIRS CacheSize 3514 calls 17508521 hits 5832010 hitRatio 0.333096 readHits 82323 writeHits 5749687 evictedDirtyPage 8313184
+prn_0.csv LIRS CacheSize 7028 calls 17508521 hits 6637712 hitRatio 0.379113 readHits 100814 writeHits 6536898 evictedDirtyPage 7531547
+prn_0.csv LIRS CacheSize 35142 calls 17508521 hits 7763096 hitRatio 0.44339 readHits 240541 writeHits 7522555 evictedDirtyPage 6541180
+prn_0.csv LIRS CacheSize 70284 calls 17508521 hits 8526233 hitRatio 0.486976 readHits 333307 writeHits 8192926 evictedDirtyPage 5849061
+prn_0.csv LIRS CacheSize 140568 calls 17508521 hits 9358591 hitRatio 0.534516 readHits 596616 writeHits 8761975 evictedDirtyPage 5226229
+prn_0.csv LIRS CacheSize 281137 calls 17508521 hits 10156970 hitRatio 0.580116 readHits 960616 writeHits 9196354 evictedDirtyPage 4759258
+prn_0.csv LIRS CacheSize 562274 calls 17508521 hits 11591394 hitRatio 0.662043 readHits 1999285 writeHits 9592109 evictedDirtyPage 4158971
+prn_0.csv LIRS CacheSize 632558 calls 17508521 hits 11859768 hitRatio 0.677371 readHits 2164800 writeHits 9694968 evictedDirtyPage 4045043
+prn_0.csv ARC CacheSize 703 calls 17508521 hits 12940816 hitRatio 0.739115 readHits 2484978 readHitRatio 0.14193 writeHits 10455838 writeHitRatio 0.597186 evictedDirtyPage 160181
+prn_0.csv ARC CacheSize 3514 calls 17508521 hits 11338108 hitRatio 0.647577 readHits 1928321 readHitRatio 0.110136 writeHits 9409787 writeHitRatio 0.53744 evictedDirtyPage 1774468
+prn_0.csv ARC CacheSize 7028 calls 17508521 hits 6756820 hitRatio 0.385916 readHits 145174 readHitRatio 0.00829162 writeHits 6611646 writeHitRatio 0.377624 evictedDirtyPage 7496278
+prn_0.csv ARC CacheSize 35142 calls 17508521 hits 7844957 hitRatio 0.448065 readHits 319165 readHitRatio 0.0182291 writeHits 7525792 writeHitRatio 0.429836 evictedDirtyPage 6550219
+prn_0.csv ARC CacheSize 70284 calls 17508521 hits 8605161 hitRatio 0.491484 readHits 413593 readHitRatio 0.0236224 writeHits 8191568 writeHitRatio 0.467862 evictedDirtyPage 5847333
+prn_0.csv ARC CacheSize 140568 calls 17508521 hits 9578996 hitRatio 0.547105 readHits 731079 readHitRatio 0.0417556 writeHits 8847917 writeHitRatio 0.505349 evictedDirtyPage 5138050
+prn_0.csv ARC CacheSize 281137 calls 17508521 hits 10410351 hitRatio 0.594588 readHits 1115018 readHitRatio 0.0636843 writeHits 9295333 writeHitRatio 0.530903 evictedDirtyPage 4577583
+prn_0.csv ARC CacheSize 562274 calls 17508521 hits 11204355 hitRatio 0.639937 readHits 1639576 readHitRatio 0.0936445 writeHits 9564779 writeHitRatio 0.546293 evictedDirtyPage 4232093
+prn_0.csv ARC CacheSize 632558 calls 17508521 hits 11546701 hitRatio 0.65949 readHits 1884567 readHitRatio 0.107637 writeHits 9662134 writeHitRatio 0.551853 evictedDirtyPage 4068004
+prn_0.csv CACHEUS AlgorithmCache Size: 703Total Calls: 17508521Total Hits: 3986486Hit Rate: 22.7688%Read Hits: 89003Write Hits: 3897483Evicted Dirty Pages: 10212339
+prn_0.csv CACHEUS AlgorithmCache Size: 3514Total Calls: 17508521Total Hits: 5383198Hit Rate: 30.7462%Read Hits: 121007Write Hits: 5262191Evicted Dirty Pages: 8864543
+prn_0.csv CACHEUS AlgorithmCache Size: 7028Total Calls: 17508521Total Hits: 6239560Hit Rate: 35.6373%Read Hits: 194321Write Hits: 6045239Evicted Dirty Pages: 8083670
+prn_0.csv CACHEUS AlgorithmCache Size: 35142Total Calls: 17508521Total Hits: 7568563Hit Rate: 43.2279%Read Hits: 352663Write Hits: 7215900Evicted Dirty Pages: 6883554
+prn_0.csv CACHEUS AlgorithmCache Size: 70284Total Calls: 17508521Total Hits: 8368103Hit Rate: 47.7945%Read Hits: 513073Write Hits: 7855030Evicted Dirty Pages: 6207712
+prn_0.csv CACHEUS AlgorithmCache Size: 140568Total Calls: 17508521Total Hits: 9017830Hit Rate: 51.5054%Read Hits: 623211Write Hits: 8394619Evicted Dirty Pages: 5597727
+prn_0.csv CACHEUS AlgorithmCache Size: 281137Total Calls: 17508521Total Hits: 9552030Hit Rate: 54.5565%Read Hits: 849234Write Hits: 8702796Evicted Dirty Pages: 5148311
+prn_0.csv CACHEUS AlgorithmCache Size: 562274Total Calls: 17508521Total Hits: 10555967Hit Rate: 60.2905%Read Hits: 1304577Write Hits: 9251390Evicted Dirty Pages: 4479171
+prn_0.csv CACHEUS AlgorithmCache Size: 632558Total Calls: 17508521Total Hits: 10771818Hit Rate: 61.5233%Read Hits: 1359017Write Hits: 9412801Evicted Dirty Pages: 4324120
+hm_1.csv LRU CacheSize 703 calls 2310293 hits 1356671 hitRatio 0.587229 readHits 1328525 readHitRatio 0.575046 writeHits 28146 writeHitRatio 0.0121829 evictedDirtyPage 125610
+hm_1.csv LRU CacheSize 3514 calls 2310293 hits 2069755 hitRatio 0.895884 readHits 2023766 readHitRatio 0.875978 writeHits 45989 writeHitRatio 0.0199061 evictedDirtyPage 106584
+hm_1.csv LRU CacheSize 7028 calls 2310293 hits 2105496 hitRatio 0.911355 readHits 2054165 readHitRatio 0.889136 writeHits 51331 writeHitRatio 0.0222184 evictedDirtyPage 99153
+hm_1.csv LRU CacheSize 35142 calls 2310293 hits 2241663 hitRatio 0.970294 readHits 2133997 readHitRatio 0.923691 writeHits 107666 writeHitRatio 0.0466027 evictedDirtyPage 20830
+hm_1.csv LRU CacheSize 70284 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 readHitRatio 0.924654 writeHits 122119 writeHitRatio 0.0528587 evictedDirtyPage 0
+hm_1.csv LRU CacheSize 140568 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 readHitRatio 0.924654 writeHits 122119 writeHitRatio 0.0528587 evictedDirtyPage 0
+hm_1.csv LRU CacheSize 281137 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 readHitRatio 0.924654 writeHits 122119 writeHitRatio 0.0528587 evictedDirtyPage 0
+hm_1.csv LRU CacheSize 562274 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 readHitRatio 0.924654 writeHits 122119 writeHitRatio 0.0528587 evictedDirtyPage 0
+hm_1.csv LRU CacheSize 632558 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 readHitRatio 0.924654 writeHits 122119 writeHitRatio 0.0528587 evictedDirtyPage 0
+hm_1.csv LFU AlgorithmCache Size: 703Total Calls: 2310293Total Hits: 544872Hit Rate: 23.5845%Read Hits: 522584Write Hits: 22288Evicted Dirty Pages: 120094
+hm_1.csv LFU AlgorithmCache Size: 3514Total Calls: 2310293Total Hits: 1999012Hit Rate: 86.5263%Read Hits: 1956364Write Hits: 42648Evicted Dirty Pages: 99464
+hm_1.csv LFU AlgorithmCache Size: 7028Total Calls: 2310293Total Hits: 2116447Hit Rate: 91.6095%Read Hits: 2065110Write Hits: 51337Evicted Dirty Pages: 89551
+hm_1.csv LFU AlgorithmCache Size: 35142Total Calls: 2310293Total Hits: 2257749Hit Rate: 97.7257%Read Hits: 2136058Write Hits: 121691Evicted Dirty Pages: 2418
+hm_1.csv LFU AlgorithmCache Size: 70284Total Calls: 2310293Total Hits: 2258341Hit Rate: 97.7513%Read Hits: 2136222Write Hits: 122119Evicted Dirty Pages: 0
+hm_1.csv LFU AlgorithmCache Size: 140568Total Calls: 2310293Total Hits: 2258341Hit Rate: 97.7513%Read Hits: 2136222Write Hits: 122119Evicted Dirty Pages: 0
+hm_1.csv LFU AlgorithmCache Size: 281137Total Calls: 2310293Total Hits: 2258341Hit Rate: 97.7513%Read Hits: 2136222Write Hits: 122119Evicted Dirty Pages: 0
+hm_1.csv LFU AlgorithmCache Size: 562274Total Calls: 2310293Total Hits: 2258341Hit Rate: 97.7513%Read Hits: 2136222Write Hits: 122119Evicted Dirty Pages: 0
+hm_1.csv LFU AlgorithmCache Size: 632558Total Calls: 2310293Total Hits: 2258341Hit Rate: 97.7513%Read Hits: 2136222Write Hits: 122119Evicted Dirty Pages: 0
+hm_1.csv LIRS CacheSize 703 calls 2310293 hits 1583513 hitRatio 0.685417 readHits 1554190 writeHits 29323 evictedDirtyPage 119254
+hm_1.csv LIRS CacheSize 3514 calls 2310293 hits 2102053 hitRatio 0.909864 readHits 2053247 writeHits 48806 evictedDirtyPage 100042
+hm_1.csv LIRS CacheSize 7028 calls 2310293 hits 2146761 hitRatio 0.929216 readHits 2089912 writeHits 56849 evictedDirtyPage 90742
+hm_1.csv LIRS CacheSize 35142 calls 2310293 hits 2258311 hitRatio 0.9775 readHits 2136200 writeHits 122111 evictedDirtyPage 2967
+hm_1.csv LIRS CacheSize 70284 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 writeHits 122119 evictedDirtyPage 0
+hm_1.csv LIRS CacheSize 140568 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 writeHits 122119 evictedDirtyPage 0
+hm_1.csv LIRS CacheSize 281137 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 writeHits 122119 evictedDirtyPage 0
+hm_1.csv LIRS CacheSize 562274 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 writeHits 122119 evictedDirtyPage 0
+hm_1.csv LIRS CacheSize 632558 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 writeHits 122119 evictedDirtyPage 0
+hm_1.csv ARC CacheSize 703 calls 2310293 hits 2215868 hitRatio 0.959129 readHits 2107233 readHitRatio 0.912106 writeHits 108635 writeHitRatio 0.0470222 evictedDirtyPage 13271
+hm_1.csv ARC CacheSize 3514 calls 2310293 hits 2112734 hitRatio 0.914487 readHits 2064551 readHitRatio 0.893632 writeHits 48183 writeHitRatio 0.0208558 evictedDirtyPage 99059
+hm_1.csv ARC CacheSize 7028 calls 2310293 hits 2142873 hitRatio 0.927533 readHits 2088328 readHitRatio 0.903923 writeHits 54545 writeHitRatio 0.0236096 evictedDirtyPage 90811
+hm_1.csv ARC CacheSize 35142 calls 2310293 hits 2257749 hitRatio 0.977257 readHits 2136058 readHitRatio 0.924583 writeHits 121691 writeHitRatio 0.0526734 evictedDirtyPage 2418
+hm_1.csv ARC CacheSize 70284 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 readHitRatio 0.924654 writeHits 122119 writeHitRatio 0.0528587 evictedDirtyPage 0
+hm_1.csv ARC CacheSize 140568 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 readHitRatio 0.924654 writeHits 122119 writeHitRatio 0.0528587 evictedDirtyPage 0
+hm_1.csv ARC CacheSize 281137 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 readHitRatio 0.924654 writeHits 122119 writeHitRatio 0.0528587 evictedDirtyPage 0
+hm_1.csv ARC CacheSize 562274 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 readHitRatio 0.924654 writeHits 122119 writeHitRatio 0.0528587 evictedDirtyPage 0
+hm_1.csv ARC CacheSize 632558 calls 2310293 hits 2258341 hitRatio 0.977513 readHits 2136222 readHitRatio 0.924654 writeHits 122119 writeHitRatio 0.0528587 evictedDirtyPage 0
+hm_1.csv CACHEUS AlgorithmCache Size: 703Total Calls: 2310293Total Hits: 1551670Hit Rate: 67.1633%Read Hits: 1521886Write Hits: 29784Evicted Dirty Pages: 120350
+hm_1.csv CACHEUS AlgorithmCache Size: 3514Total Calls: 2310293Total Hits: 2077314Hit Rate: 89.9156%Read Hits: 2030489Write Hits: 46825Evicted Dirty Pages: 104663
+hm_1.csv CACHEUS AlgorithmCache Size: 7028Total Calls: 2310293Total Hits: 2101914Hit Rate: 90.9804%Read Hits: 2045574Write Hits: 56340Evicted Dirty Pages: 97125
+hm_1.csv CACHEUS AlgorithmCache Size: 35142Total Calls: 2310293Total Hits: 2254179Hit Rate: 97.5711%Read Hits: 2134521Write Hits: 119658Evicted Dirty Pages: 8667
+hm_1.csv CACHEUS AlgorithmCache Size: 70284Total Calls: 2310293Total Hits: 2258341Hit Rate: 97.7513%Read Hits: 2136222Write Hits: 122119Evicted Dirty Pages: 0
+hm_1.csv CACHEUS AlgorithmCache Size: 140568Total Calls: 2310293Total Hits: 2258341Hit Rate: 97.7513%Read Hits: 2136222Write Hits: 122119Evicted Dirty Pages: 0
+hm_1.csv CACHEUS AlgorithmCache Size: 281137Total Calls: 2310293Total Hits: 2258341Hit Rate: 97.7513%Read Hits: 2136222Write Hits: 122119Evicted Dirty Pages: 0
+hm_1.csv CACHEUS AlgorithmCache Size: 562274Total Calls: 2310293Total Hits: 2258341Hit Rate: 97.7513%Read Hits: 2136222Write Hits: 122119Evicted Dirty Pages: 0
+hm_1.csv CACHEUS AlgorithmCache Size: 632558Total Calls: 2310293Total Hits: 2258341Hit Rate: 97.7513%Read Hits: 2136222Write Hits: 122119Evicted Dirty Pages: 0
+mds_0.csv LRU CacheSize 703 calls 2905405 hits 1248488 hitRatio 0.429712 readHits 48702 readHitRatio 0.0167626 writeHits 1199786 writeHitRatio 0.41295 evictedDirtyPage 846375
+mds_0.csv LRU CacheSize 3514 calls 2905405 hits 1329423 hitRatio 0.457569 readHits 54595 readHitRatio 0.0187908 writeHits 1274828 writeHitRatio 0.438778 evictedDirtyPage 769260
+mds_0.csv LRU CacheSize 7028 calls 2905405 hits 1370537 hitRatio 0.47172 readHits 59099 readHitRatio 0.0203411 writeHits 1311438 writeHitRatio 0.451379 evictedDirtyPage 729434
+mds_0.csv LRU CacheSize 35142 calls 2905405 hits 1932525 hitRatio 0.665148 readHits 73545 readHitRatio 0.0253132 writeHits 1858980 writeHitRatio 0.639835 evictedDirtyPage 155614
+mds_0.csv LRU CacheSize 70284 calls 2905405 hits 1984173 hitRatio 0.682925 readHits 80600 readHitRatio 0.0277414 writeHits 1903573 writeHitRatio 0.655183 evictedDirtyPage 80112
+mds_0.csv LRU CacheSize 140568 calls 2905405 hits 1991896 hitRatio 0.685583 readHits 87498 readHitRatio 0.0301156 writeHits 1904398 writeHitRatio 0.655467 evictedDirtyPage 76124
+mds_0.csv LRU CacheSize 281137 calls 2905405 hits 1998339 hitRatio 0.6878 readHits 88803 readHitRatio 0.0305648 writeHits 1909536 writeHitRatio 0.657236 evictedDirtyPage 71140
+mds_0.csv LRU CacheSize 562274 calls 2905405 hits 2049002 hitRatio 0.705238 readHits 122454 readHitRatio 0.042147 writeHits 1926548 writeHitRatio 0.663091 evictedDirtyPage 38593
+mds_0.csv LRU CacheSize 632558 calls 2905405 hits 2049865 hitRatio 0.705535 readHits 122973 readHitRatio 0.0423256 writeHits 1926892 writeHitRatio 0.663209 evictedDirtyPage 38046
+mds_0.csv LFU AlgorithmCache Size: 703Total Calls: 2905405Total Hits: 1078192Hit Rate: 37.1099%Read Hits: 18451Write Hits: 1059741Evicted Dirty Pages: 981902
+mds_0.csv LFU AlgorithmCache Size: 3514Total Calls: 2905405Total Hits: 1274961Hit Rate: 43.8824%Read Hits: 59082Write Hits: 1215879Evicted Dirty Pages: 824284
+mds_0.csv LFU AlgorithmCache Size: 7028Total Calls: 2905405Total Hits: 1373810Hit Rate: 47.2846%Read Hits: 70781Write Hits: 1303029Evicted Dirty Pages: 734163
+mds_0.csv LFU AlgorithmCache Size: 35142Total Calls: 2905405Total Hits: 1947386Hit Rate: 67.0263%Read Hits: 81797Write Hits: 1865589Evicted Dirty Pages: 145026
+mds_0.csv LFU AlgorithmCache Size: 70284Total Calls: 2905405Total Hits: 2038610Hit Rate: 70.1661%Read Hits: 97178Write Hits: 1941432Evicted Dirty Pages: 36831
+mds_0.csv LFU AlgorithmCache Size: 140568Total Calls: 2905405Total Hits: 2040962Hit Rate: 70.2471%Read Hits: 99154Write Hits: 1941808Evicted Dirty Pages: 28859
+mds_0.csv LFU AlgorithmCache Size: 281137Total Calls: 2905405Total Hits: 2042821Hit Rate: 70.3111%Read Hits: 100801Write Hits: 1942020Evicted Dirty Pages: 28810
+mds_0.csv LFU AlgorithmCache Size: 562274Total Calls: 2905405Total Hits: 2076594Hit Rate: 71.4735%Read Hits: 123758Write Hits: 1952836Evicted Dirty Pages: 10254
+mds_0.csv LFU AlgorithmCache Size: 632558Total Calls: 2905405Total Hits: 2076929Hit Rate: 71.485%Read Hits: 124086Write Hits: 1952843Evicted Dirty Pages: 10243
+mds_0.csv LIRS CacheSize 703 calls 2905405 hits 1288074 hitRatio 0.443337 readHits 37857 writeHits 1250217 evictedDirtyPage 793018
+mds_0.csv LIRS CacheSize 3514 calls 2905405 hits 1384860 hitRatio 0.47665 readHits 51007 writeHits 1333853 evictedDirtyPage 709474
+mds_0.csv LIRS CacheSize 7028 calls 2905405 hits 1472076 hitRatio 0.506668 readHits 56087 writeHits 1415989 evictedDirtyPage 624186
+mds_0.csv LIRS CacheSize 35142 calls 2905405 hits 1950719 hitRatio 0.67141 readHits 84818 writeHits 1865901 evictedDirtyPage 146208
+mds_0.csv LIRS CacheSize 70284 calls 2905405 hits 2039469 hitRatio 0.701957 readHits 111866 writeHits 1927603 evictedDirtyPage 59490
+mds_0.csv LIRS CacheSize 140568 calls 2905405 hits 2065523 hitRatio 0.710924 readHits 119506 writeHits 1946017 evictedDirtyPage 30772
+mds_0.csv LIRS CacheSize 281137 calls 2905405 hits 2067544 hitRatio 0.71162 readHits 120748 writeHits 1946796 evictedDirtyPage 28341
+mds_0.csv LIRS CacheSize 562274 calls 2905405 hits 2081913 hitRatio 0.716566 readHits 124534 writeHits 1957379 evictedDirtyPage 12269
+mds_0.csv LIRS CacheSize 632558 calls 2905405 hits 2084872 hitRatio 0.717584 readHits 126092 writeHits 1958780 evictedDirtyPage 8061
+mds_0.csv ARC CacheSize 703 calls 2905405 hits 1673491 hitRatio 0.575992 readHits 67927 readHitRatio 0.0233795 writeHits 1605564 writeHitRatio 0.552613 evictedDirtyPage 374949
+mds_0.csv ARC CacheSize 3514 calls 2905405 hits 1392090 hitRatio 0.479138 readHits 65233 readHitRatio 0.0224523 writeHits 1326857 writeHitRatio 0.456686 evictedDirtyPage 717250
+mds_0.csv ARC CacheSize 7028 calls 2905405 hits 1444473 hitRatio 0.497168 readHits 69845 readHitRatio 0.0240397 writeHits 1374628 writeHitRatio 0.473128 evictedDirtyPage 666325
+mds_0.csv ARC CacheSize 35142 calls 2905405 hits 1980460 hitRatio 0.681647 readHits 89318 readHitRatio 0.030742 writeHits 1891142 writeHitRatio 0.650905 evictedDirtyPage 120511
+mds_0.csv ARC CacheSize 70284 calls 2905405 hits 2038675 hitRatio 0.701684 readHits 97222 readHitRatio 0.0334625 writeHits 1941453 writeHitRatio 0.668221 evictedDirtyPage 38147
+mds_0.csv ARC CacheSize 140568 calls 2905405 hits 2041015 hitRatio 0.702489 readHits 99200 readHitRatio 0.0341433 writeHits 1941815 writeHitRatio 0.668346 evictedDirtyPage 28843
+mds_0.csv ARC CacheSize 281137 calls 2905405 hits 2042824 hitRatio 0.703112 readHits 100803 readHitRatio 0.034695 writeHits 1942021 writeHitRatio 0.668417 evictedDirtyPage 28808
+mds_0.csv ARC CacheSize 562274 calls 2905405 hits 2076594 hitRatio 0.714735 readHits 123758 readHitRatio 0.0425958 writeHits 1952836 writeHitRatio 0.672139 evictedDirtyPage 10254
+mds_0.csv ARC CacheSize 632558 calls 2905405 hits 2076929 hitRatio 0.71485 readHits 124086 readHitRatio 0.0427087 writeHits 1952843 writeHitRatio 0.672141 evictedDirtyPage 10243
+mds_0.csv CACHEUS AlgorithmCache Size: 703Total Calls: 2905405Total Hits: 1242993Hit Rate: 42.7821%Read Hits: 47699Write Hits: 1195294Evicted Dirty Pages: 850756
+mds_0.csv CACHEUS AlgorithmCache Size: 3514Total Calls: 2905405Total Hits: 1333553Hit Rate: 45.899%Read Hits: 52276Write Hits: 1281277Evicted Dirty Pages: 762795
+mds_0.csv CACHEUS AlgorithmCache Size: 7028Total Calls: 2905405Total Hits: 1368432Hit Rate: 47.0995%Read Hits: 58328Write Hits: 1310104Evicted Dirty Pages: 730721
+mds_0.csv CACHEUS AlgorithmCache Size: 35142Total Calls: 2905405Total Hits: 1937102Hit Rate: 66.6724%Read Hits: 76449Write Hits: 1860653Evicted Dirty Pages: 153812
+mds_0.csv CACHEUS AlgorithmCache Size: 70284Total Calls: 2905405Total Hits: 1983857Hit Rate: 68.2816%Read Hits: 80300Write Hits: 1903557Evicted Dirty Pages: 79972
+mds_0.csv CACHEUS AlgorithmCache Size: 140568Total Calls: 2905405Total Hits: 1991778Hit Rate: 68.5542%Read Hits: 87455Write Hits: 1904323Evicted Dirty Pages: 76042
+mds_0.csv CACHEUS AlgorithmCache Size: 281137Total Calls: 2905405Total Hits: 1998512Hit Rate: 68.786%Read Hits: 90090Write Hits: 1908422Evicted Dirty Pages: 75153
+mds_0.csv CACHEUS AlgorithmCache Size: 562274Total Calls: 2905405Total Hits: 2041759Hit Rate: 70.2745%Read Hits: 119510Write Hits: 1922249Evicted Dirty Pages: 49065
+mds_0.csv CACHEUS AlgorithmCache Size: 632558Total Calls: 2905405Total Hits: 2031436Hit Rate: 69.9192%Read Hits: 123521Write Hits: 1907915Evicted Dirty Pages: 68499

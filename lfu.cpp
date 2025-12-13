@@ -112,15 +112,14 @@ void LFUCache::cacheHits() {
 
     std::ofstream result("ExperimentalResult.txt", std::ios_base::app);
     if (result.is_open()) {
-        result << "LFU Algorithm" << std::endl;
-        result << "Cache Size: " << capacity << std::endl;
-        result << "Total Calls: " << calls << std::endl;
-        result << "Total Hits: " << hits << std::endl;
-        result << "Hit Rate: " << (static_cast<double>(hits) / calls) * 100 << "%" << std::endl;
-        result << "Read Hits: " << readHits << std::endl;
-        result << "Write Hits: " << writeHits << std::endl;
-        result << "Evicted Dirty Pages: " << evictedDirtyPage << std::endl;
-        result << "----------------------------------------" << std::endl;
+        result << "LFU Algorithm" 
+         << "Cache Size: " << capacity 
+         << "Total Calls: " << calls 
+         << "Total Hits: " << hits 
+         << "Hit Rate: " << (static_cast<double>(hits) / calls) * 100 << "%" 
+         << "Read Hits: " << readHits 
+         << "Write Hits: " << writeHits 
+         << "Evicted Dirty Pages: " << evictedDirtyPage << std::endl;
         result.close();
     }
 
